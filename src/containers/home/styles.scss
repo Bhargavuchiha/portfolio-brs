@@ -1,0 +1,81 @@
+.home {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      color: var(--theme-main-color);
+      margin: 0;
+      font-weight: 500;
+      font-size: 8rem;
+      line-height: 10rem;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typingEffectAnimation 2.5s steps(30,end);
+      --gradient-color: linear-gradient(to right, #bda0f7, #472478);
+    
+    /* Apply the gradient color as text color */
+    color: transparent;
+    
+    /* Apply the gradient color as background with text clipping */
+    background-image: var(--gradient-color);
+    background-clip: text;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .home__text-wrapper {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+}
+
+@media only screen and (max-width: 551px) and (max-width: 768px) {
+  .home__text-wrapper {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 990px) {
+  .home__text-wrapper {
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+}
+
+
+@keyframes typingEffectAnimation{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.butto{
+    margin-top: 40px;
+    cursor: pointer;
+    padding: 10px 65px;
+    font-size: 2rem;
+    background: transparent;
+    color: var(--theme-main-color);
+    border-radius: 4px;
+    font-weight: 500;
+
+    &:hover{
+        background-color: var(--theme-main-color);
+        color: black;
+    }
+}
